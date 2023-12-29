@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  front:
+    build: ./Front
+    container_name: front_c
+    ports:
+      - '3000:3000'
+    stdin_open : true
+    tty : true
+
+  back:
+    build: ./Back
+    container_name: back_c
+    ports:
+      - '4000:4000'
